@@ -24,7 +24,8 @@ mongoose.connect('mongodb://localhost:27017/cafe', (err, res) => {
 });*/
 
 const conMongodb = async() => {
-    await mongoose.connect('mongodb://localhost:27017/cafe', {
+    // await mongoose.connect('mongodb://localhost:27017/cafe', {
+    await mongoose.connect(process.env.URLDB, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
